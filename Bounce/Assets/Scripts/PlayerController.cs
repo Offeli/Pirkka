@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
     void setCountText()
     {
         countText.text = "Points : " + count.ToString();
-        if(count >= 1)
+        if(count >= 10)
         {
             winText.text = "You collected all the coins!";
         }
