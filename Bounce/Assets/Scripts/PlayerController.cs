@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Text countText;
     public Text winText;
+    public LevelController lvlController;
 
     private Rigidbody rb;
     private int count;
@@ -44,9 +45,10 @@ public class PlayerController : MonoBehaviour
     void setCountText()
     {
         countText.text = "Points : " + count.ToString();
-        if(count >= 10)
+        if(count == 10)
         {
             winText.text = "You collected all the coins!";
+            lvlController.TenCollected();
         }
     }
 }
