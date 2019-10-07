@@ -44,10 +44,12 @@ public class PlayerController : MonoBehaviour
 
     void setCountText()
     {
-        countText.text = "Points : " + count.ToString();
+        countText.text = count.ToString() + "/10" ;
         if(count == 10)
         {
             winText.text = "You collected all the coins!";
+            // Waits for 3 seconds before executing the scene change
+            System.Threading.Thread.Sleep(3000);
             lvlController.TenCollected();
         }
     }
