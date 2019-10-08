@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public LevelController lvlController;
 
     public Vector3 jump;
-    public float jumpForce = 2.0f;
+   // public float jumpForce = 2.0f;
     public bool isGrounded;
 
     private Rigidbody rb;
@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
         count = 0;
-        setCountText();
+        SetCountText();
         winText.text = "";
     }
 
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
 
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+            rb.AddForce(jump, ForceMode.Impulse);
             isGrounded = false;
         }
             Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
@@ -54,11 +54,11 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count = count + 1;
-            setCountText();
+            SetCountText();
         }
     }
 
-    void setCountText()
+    void SetCountText()
     {
         countText.text = count.ToString() + "/10" ;
         if(count == 10)
