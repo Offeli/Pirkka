@@ -799,11 +799,6 @@ PrefabInstance:
       propertyPath: isGrounded
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7516824739171784819, guid: 76f7d76e7df55444f9df015ba90c3b3b,
-        type: 3}
-      propertyPath: crashSoft
-      value: 
-      objectReference: {fileID: 8300000, guid: 1da605e62214a4d6596e6544de84e34e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76f7d76e7df55444f9df015ba90c3b3b, type: 3}
 --- !u!1001 &1137391186

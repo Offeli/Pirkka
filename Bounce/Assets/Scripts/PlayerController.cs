@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
         SetCountText();
         winText.text = "";
 
-        source.Play();  // REMOVE!
+        source.Play(0);  // REMOVE!
     }
 
     void FixedUpdate()
@@ -75,7 +75,8 @@ public class PlayerController : MonoBehaviour
             //if (coll.relativeVelocity.magnitude < velocityClipSplit)
 
             //float hitVol = 1;
-         source.Play();
+         source.Play(0);
+        // yield return new WaitForSeconds(10);
 
             //500_hz_sinus_tone
             //else
