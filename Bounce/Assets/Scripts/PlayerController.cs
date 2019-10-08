@@ -10,12 +10,17 @@ public class PlayerController : MonoBehaviour
     public Text winText;
     public LevelController lvlController;
 
+    public Vector3 jump;
+    public float jumpForce = 2.0f;
+    public bool isGrounded;
+
     private Rigidbody rb;
     private int count;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
+        jump = new Vector3(0.0f, 2.0f, 0.0f);
         count = 0;
         setCountText();
         winText.text = "";
@@ -26,10 +31,21 @@ public class PlayerController : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        {
+
+            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+            isGrounded = false;
+        }
+            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rb.AddForce(movement * speed);
 
+    }
+
+    void OnCollisionStay()
+    {
+        isGrounded = true;
     }
 
     private void OnTriggerEnter(Collider other)

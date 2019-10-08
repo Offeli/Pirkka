@@ -621,10 +621,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 9a95fee5-a237-42f1-84a1-4309e50ad8a9
+  cloudProjectId: 
   framebufferDepthMemorylessMode: 0
-  projectName: Bounce
-  organizationId: korppu
+  projectName: 
+  organizationId: 
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
