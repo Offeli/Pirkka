@@ -3,7 +3,12 @@ guid: 6db098144c3e65440aad5a671daca74f
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - countText: {instanceID: 0}
+  - winText: {instanceID: 0}
+  - lvlController: {instanceID: 0}
+  - crashSoft: {fileID: 8300000, guid: 1da605e62214a4d6596e6544de84e34e, type: 3}
+  - crashHard: {fileID: 8300000, guid: 1da605e62214a4d6596e6544de84e34e, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

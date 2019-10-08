@@ -125,6 +125,11 @@ MonoBehaviour:
   speed: 10
   countText: {fileID: 0}
   winText: {fileID: 0}
+  lvlController: {fileID: 0}
+  jump: {x: 0, y: 0, z: 0}
+  isGrounded: 0
+  crashSoft: {fileID: 0}
+  crashHard: {fileID: 8300000, guid: 1da605e62214a4d6596e6544de84e34e, type: 3}
 --- !u!114 &7516824739171784817
 MonoBehaviour:
   m_ObjectHideFlags: 0

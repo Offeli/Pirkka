@@ -17,6 +17,15 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private int count;
 
+    public AudioClip crashSoft;
+    public AudioClip crashHard;
+
+    public AudioSource source;
+    private float lowPitchRange = .75F;
+    private float highPitchRange = 1.5F;
+    private float velToVol = .2F;
+    private float velocityClipSplit = 10F;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -24,6 +33,8 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winText.text = "";
+
+        source.Play();  // REMOVE!
     }
 
     void FixedUpdate()
@@ -56,9 +67,24 @@ public class PlayerController : MonoBehaviour
             count = count + 1;
             SetCountText();
         }
+
+
+        {
+            //source.pitch = Random.Range(lowPitchRange, highPitchRange);
+            //float hitVol = coll.relativeVelocity.magnitude * velToVol;
+            //if (coll.relativeVelocity.magnitude < velocityClipSplit)
+
+            //float hitVol = 1;
+         source.Play();
+
+            //500_hz_sinus_tone
+            //else
+            // source.PlayOneShot(crashHard, hitVol);
+        }
+
     }
 
-    void SetCountText()
+        void SetCountText()
     {
         countText.text = count.ToString() + "/10" ;
         if(count == 10)
@@ -68,5 +94,11 @@ public class PlayerController : MonoBehaviour
             System.Threading.Thread.Sleep(3000);
             lvlController.TenCollected();
         }
+    }
+
+    void Awake()
+    {
+
+        source = GetComponent<AudioSource>();
     }
 }
