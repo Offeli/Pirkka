@@ -9,10 +9,10 @@ public class LevelController : MonoBehaviour
     public static int levelIndex = 0;
 
     // This method jsut changes the level from 1 onwards
-    public  void TenCollected()
+    public void TenCollected()
     {
-            levelIndex++;
-            SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(levelIndex);
+        levelIndex++;
     }
 
 }

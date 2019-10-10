@@ -9,12 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/ValtteriKentta.unity
     guid: fd6e2b1cefacd624f869929ca8c8ab99
   - enabled: 1
-    path: Assets/Scenes/JanKentta.unity
-    guid: f0fc95fdce4764c11b142475e0aa5074
-  - enabled: 1
     path: Assets/Scenes/OskarinKentta.unity
     guid: c5c6493e802484e4cad937d64fb7867c
-  - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 3e97eefdfd4d47d44ae8a1d02ea480b4
   m_configObjects: {}
