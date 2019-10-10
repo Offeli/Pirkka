@@ -17,14 +17,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody rb;
     private int count;
 
-    public AudioClip crashSoft;
-    public AudioClip crashHard;
-
-    public AudioSource source;
-    private float lowPitchRange = .75F;
-    private float highPitchRange = 1.5F;
-    private float velToVol = .2F;
-    private float velocityClipSplit = 10F;
+    public AudioSource source; // ???
 
     private void Start()
     {
@@ -34,11 +27,14 @@ public class PlayerController : MonoBehaviour
         SetCountText();
         winText.text = "";
 
-        source.Play(0);  // REMOVE!
+
     }
 
     void FixedUpdate()
     {
+        AudioScript page = new AudioScript(); // ???
+        page.Play2();
+
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
@@ -47,10 +43,16 @@ public class PlayerController : MonoBehaviour
 
             rb.AddForce(jump, ForceMode.Impulse);
             isGrounded = false;
+
+            //AudioScript page2 = new AudioScript(); // ???
+            //page2.Play2();
         }
             Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rb.AddForce(movement * speed);
+
+        //FirstPage page2 = new FirstPage();
+        //page2.Yell();
 
     }
 
@@ -67,25 +69,9 @@ public class PlayerController : MonoBehaviour
             count = count + 1;
             SetCountText();
         }
-
-
-        {
-            //source.pitch = Random.Range(lowPitchRange, highPitchRange);
-            //float hitVol = coll.relativeVelocity.magnitude * velToVol;
-            //if (coll.relativeVelocity.magnitude < velocityClipSplit)
-
-            //float hitVol = 1;
-         source.Play(0);
-        // yield return new WaitForSeconds(10);
-
-            //500_hz_sinus_tone
-            //else
-            // source.PlayOneShot(crashHard, hitVol);
-        }
-
     }
 
-        void SetCountText()
+    void SetCountText()
     {
         countText.text = count.ToString() + "/10" ;
         if(count == 10)
@@ -98,8 +84,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void Awake()
-    {
-
-        source = GetComponent<AudioSource>();
+    { 
+        //source = GetComponent<AudioSource>(); //??
     }
 }
