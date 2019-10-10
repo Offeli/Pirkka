@@ -25,7 +25,7 @@ public class PauseMenu : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Joystick1Button10))
+        if (Input.GetKeyDown(KeyCode.Joystick1Button9))
         {
             if (GameIsPaused)
             {
