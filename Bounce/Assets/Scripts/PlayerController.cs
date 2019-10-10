@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public static int lvlIndex;
 
     public Vector3 jump;
-   // public float jumpForce = 2.0f;
+    //public float jumpForce = 2.0f;
     public bool isGrounded;
 
     private Rigidbody rb;
@@ -40,7 +40,15 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(jump, ForceMode.Impulse);
             isGrounded = false;
         }
-            Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
+
+        if (Input.GetKeyDown(KeyCode.Joystick1Button2) && isGrounded)
+        {
+
+            rb.AddForce(jump, ForceMode.Impulse);
+            isGrounded = false;
+        }
+
+        Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rb.AddForce(movement * speed);
 
