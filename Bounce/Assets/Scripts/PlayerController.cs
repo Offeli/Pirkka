@@ -28,18 +28,12 @@ public class PlayerController : MonoBehaviour
         count = 0;
         SetCountText();
         winText.text = "";
-<<<<<<< HEAD
-
-
-=======
         lvlIndex = 0;
->>>>>>> c8807221bc71a708875bc440f99f6cd09e9f9fbd
     }
 
     void FixedUpdate()
     {
-        AudioScript page = new AudioScript(); // ???
-        page.Play2();
+    
 
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
@@ -49,9 +43,6 @@ public class PlayerController : MonoBehaviour
 
             rb.AddForce(jump, ForceMode.Impulse);
             isGrounded = false;
-
-            //AudioScript page2 = new AudioScript(); // ???
-            //page2.Play2();
         }
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button2) && isGrounded)
@@ -64,9 +55,6 @@ public class PlayerController : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         rb.AddForce(movement * speed);
-
-        //FirstPage page2 = new FirstPage();
-        //page2.Yell();
 
     }
 
@@ -98,16 +86,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-<<<<<<< HEAD
-    void Awake()
-    { 
-        //source = GetComponent<AudioSource>(); //??
-=======
     private IEnumerator WaitForIt()
     {
         yield return new WaitForSeconds(5);
         lvlIndex++;
         SceneManager.LoadScene(lvlIndex);
->>>>>>> c8807221bc71a708875bc440f99f6cd09e9f9fbd
     }
 }
