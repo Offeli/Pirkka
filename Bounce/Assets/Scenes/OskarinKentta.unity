@@ -1871,7 +1871,7 @@ PrefabInstance:
     - target: {fileID: 3555962601495308027, guid: 2cde8519d1396b743acbe9fc0bbe41bc,
         type: 3}
       propertyPath: m_Name
-      value: PickUp (1)
+      value: PickUp (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3555962601495308022, guid: 2cde8519d1396b743acbe9fc0bbe41bc,
         type: 3}
@@ -2129,6 +2129,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PickUp (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3555962601495308027, guid: 2cde8519d1396b743acbe9fc0bbe41bc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3555962601495308022, guid: 2cde8519d1396b743acbe9fc0bbe41bc,
         type: 3}
@@ -4854,7 +4859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1506443730
 Transform:
   m_ObjectHideFlags: 0
