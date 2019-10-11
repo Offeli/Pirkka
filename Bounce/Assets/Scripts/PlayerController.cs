@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Text countText;
     public Text winText;
-    public LevelController lvlController;
+    //public LevelController lvlController;
     public static int lvlIndex;
 
     public Vector3 jump;
@@ -90,6 +90,25 @@ public class PlayerController : MonoBehaviour
     {
         yield return new WaitForSeconds(5);
         lvlIndex++;
-        SceneManager.LoadScene(lvlIndex);
+        //SceneManager.LoadScene(lvlIndex);
+        if(lvlIndex == 1)
+        {
+            
+            SceneManager.LoadScene(1);
+            
+        }
+
+        if (lvlIndex == 2)
+        {
+            
+            SceneManager.LoadScene(2);
+            
+        }
+
+        if (lvlIndex == 3)
+        {
+            Application.Quit();
+        }
+
     }
 }
