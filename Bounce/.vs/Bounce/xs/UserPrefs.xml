@@ -7,12 +7,12 @@
       <File FileName="Assets/Scripts/Respawn.cs" />
       <File FileName="Assets/Scripts/Rotator.cs" />
       <File FileName="Assets/Scripts/LevelController.cs" />
-      <File FileName="Assets/Scripts/TrashScripts/AudioScript.cs" Line="14" Column="1" />
+      <File FileName="Assets/Scripts/TrashScripts/AudioScript.cs" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9affdfb2-d9fc-4441-b854-eeb98a584f7b" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c347dd91-77f6-4f52-8511-b11f7735783e" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
