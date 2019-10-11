@@ -9,7 +9,6 @@ public class PlayerController : MonoBehaviour
     public float speed;
     public Text countText;
     public Text winText;
-    public LevelController lvlController;
     public static int lvlIndex;
 
     public Vector3 jump;
